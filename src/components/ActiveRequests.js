@@ -42,13 +42,13 @@ function ActiveRequests() {
   return (
     <div className="flex bg-gray-100">
       <Sidebar />
-      <div className="p-2 flex-1  h-screen overflow-y-auto">
+      <div className="p-2 flex-1  h-screen overflow-hidden">
         <ScreenTitles title="Pending Requests" />
         {loading && <Loadingpage />}
-        <div className="bg-white rounded-md w-full p-5 mt-2">
-          <div className="rounded-lg md:w-3/4 m-auto overflow-auto shadow-md">
+        <div className="bg-white rounded-md w-full p-5 mt-2 h-full">
+          <div className="rounded-lg h-3/4 md:w-3/4 m-auto overflow-y-scroll shadow-md">
             <table className="w-full ">
-              <thead className="text-left text-textColor text-base bg-buttonColor uppercase tracking-wider">
+              <thead className="text-left text-textColor text-base bg-buttonColor uppercase tracking-wider sticky top-0">
                 <tr>
                   <th className="px-6 py-3">Name</th>
                   <th className="px-6 py-3">Company</th>

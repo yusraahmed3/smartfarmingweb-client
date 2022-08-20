@@ -56,7 +56,7 @@ export const sendRequest = (formData) => async (dispatch) => {
   } catch (error) {
     console.log(error);
     toast.configure();
-    toast.error("Something went wrong. Please try again", {
+    toast.error(error.response.data.message, {
       position: "top-center",
       autoClose: 5000,
       pauseOnHover: true,
@@ -109,7 +109,7 @@ export const approveRequest = (id) => async (dispatch) => {
   } catch (error) {
     console.log(error);
     toast.configure();
-    toast.error("Something went wrong. Please try again", {
+    toast.error(error.response.data.message, {
       position: "top-center",
       autoClose: 5000,
       pauseOnHover: true,

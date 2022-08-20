@@ -1,6 +1,6 @@
 import React from "react";
 import Sidebar from "./Sidebar";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { Button } from "./Button";
 import { approveRequest, rejectRequest } from "../actions/request";
 import { useDispatch } from "react-redux";

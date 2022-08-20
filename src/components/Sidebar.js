@@ -34,7 +34,7 @@ function Sidebar() {
     <aside
       className={`${
         open ? "w-64 h-screen " : "w-14 lg:w-24  md:h-auto"
-      } bg-primaryColor duration-300 p-2  absolute lg:relative shadow-xl rounded-md lg:rounded-none  `}
+      } bg-primaryColor duration-300 p-2  absolute lg:relative shadow-xl rounded-md lg:rounded-none z-30 `}
     >
       <div
         onClick={openSidebar}

@@ -38,10 +38,10 @@ function ReviewedRequests() {
       <div className="p-2 flex-1  h-screen overflow-hidden">
         <ScreenTitles title="Reviewed Requests" />
         {loading && <Loadingpage />}
-        <div className="bg-white rounded-md  p-5 mt-2">
-          <div className="rounded-lg md:w-3/4 m-auto overflow-auto shadow-md">
-            <table className="w-full ">
-              <thead className="text-left text-textColor text-base bg-buttonColor uppercase tracking-wider">
+        <div className="bg-white rounded-md p-5 mt-2 h-full">
+          <div className="rounded-lg h-3/4 md:w-3/4 m-auto overflow-y-scroll  shadow-md">
+            <table className="w-full  h-full">
+              <thead className="text-left text-textColor text-base bg-buttonColor uppercase tracking-wider sticky top-0">
                 <tr>
                   <th className="px-6 py-3">Name</th>
                   <th className="px-6 py-3">Company</th>
@@ -51,7 +51,7 @@ function ReviewedRequests() {
                   </th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-lighterColor">
+              <tbody className="divide-y divide-lighterColor  ">
                 {requests?.reverse().map((request, i) => {
                   return (
                     request.status !== "pending" && (
