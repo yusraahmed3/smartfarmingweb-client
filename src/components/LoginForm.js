@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
 import "react-toastify/dist/ReactToastify.css";
 
 import { AiOutlineLock } from "react-icons/ai";
-import { Link, useNavigate, useSearchParams } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
 import { useForm } from "react-hook-form";
 import FormErrors from "./FormErrors";
@@ -18,7 +17,7 @@ function LoginForm() {
   const [showPassword, setShowPassword] = useState(false);
   const dispatch = useDispatch();
 
-  const { loading, error, userData } = useSelector((state) => state.userAuth);
+  const { loading, userData } = useSelector((state) => state.userAuth);
   const {
     register,
     handleSubmit,
@@ -43,7 +42,7 @@ function LoginForm() {
     if (userData) {
       navigate("/dashboard");
     }
-  }, [navigate]);
+  }, [navigate, userData]);
 
   return loading ? (
     <Loadingpage />
@@ -56,7 +55,7 @@ function LoginForm() {
             <AiOutlineLock />
             Login
           </h1>
-          <div className="w-3/4 px-4 md:px-0 md:w-1/2 lg:w-1/3 flex flex-col gap-4 mx-auto">
+          <div className="w-full px-4 md:px-0 md:w-1/2 lg:w-1/3 flex flex-col gap-4 mx-auto">
             <form
               onSubmit={handleSubmit(onSubmit)}
               className="flex flex-col gap-y-3"

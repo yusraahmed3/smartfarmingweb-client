@@ -84,7 +84,7 @@ function Request() {
     reset();
   };
   return (
-    <div className="">
+    <>
       <Navbar />
       <div className="flex flex-col items-center gap-y-5">
         <h1 className="font-bold text-2xl text-center text-black mt-5">
@@ -93,7 +93,7 @@ function Request() {
 
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="flex flex-col md:flex-row gap-x-10 w-3/4  p-5"
+          className="flex flex-col md:flex-row gap-x-10 w-full md:w-3/4  p-5"
           method="POST"
           encType="multipart/form-data"
         >
@@ -180,7 +180,7 @@ function Request() {
           </div>
         </form>
       </div>
-    </div>
+    </>
   );
 }
 

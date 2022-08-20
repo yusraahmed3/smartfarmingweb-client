@@ -5,7 +5,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { updateUser } from "../actions/userActions";
 import { useForm } from "react-hook-form";
 import { Loadingpage } from "./Loadingpage";
-import FormErrors from "./FormErrors";
 import { AiFillEdit } from "react-icons/ai";
 import ScreenTitles from "./ScreenTitles";
 
@@ -19,13 +18,7 @@ function ManageAccount() {
     inputRef.current?.click();
   };
 
-  const {
-    register,
-    handleSubmit,
-    watch,
-    reset,
-    formState: { errors },
-  } = useForm({
+  const { register, handleSubmit, reset } = useForm({
     // populate the form
     defaultValues: useMemo(() => userData, [userData]),
   });

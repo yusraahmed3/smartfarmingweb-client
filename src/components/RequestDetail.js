@@ -9,7 +9,6 @@ import ScreenTitles from "./ScreenTitles";
 function RequestDetail() {
   const location = useLocation();
   const dispatch = useDispatch();
-  const navigate = useNavigate();
   // get data and pathname from prev location
   const { request, prevPath } = location.state;
 

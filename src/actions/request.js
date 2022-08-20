@@ -98,6 +98,7 @@ export const approveRequest = (id) => async (dispatch) => {
     const { data } = await api.approveRequest(id);
 
     dispatch({ type: APPROVE_REQUEST_SUCCESS, payload: data });
+    console.log(data);
     toast.configure();
     toast.success("Request approved", {
       position: "top-center",
